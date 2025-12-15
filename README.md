@@ -17,10 +17,19 @@ AmbuIndia is a rapid ambulance booking and emergency response application design
 - **Icons**: Lucide React
 - **Build/Runtime**: ES Modules via `esm.sh` (No bundler required for basic preview)
 
-## Setup
+First, install dependencies:
 
-http://localhost:3000/
+```bash
+npm install
+```
 
+Then, run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 ## API Configuration
 
 The application requires a valid Google Gemini API Key to function fully (specifically the Chat Assistant).

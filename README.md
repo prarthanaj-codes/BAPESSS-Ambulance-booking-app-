@@ -16,20 +16,10 @@ AmbuIndia is a rapid ambulance booking and emergency response application design
 - **AI Integration**: Google GenAI SDK (`@google/genai`)
 - **Icons**: Lucide React
 - **Build/Runtime**: ES Modules via `esm.sh` (No bundler required for basic preview)
+## Click on this to view the app
 
-First, install dependencies:
-
-```bash
-npm install
-```
-
-Then, run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ https://prarthanaj-codes.github.io/BAPESSS-Ambulance-booking-app-/
+ 
 ## API Configuration
 
 The application requires a valid Google Gemini API Key to function fully (specifically the Chat Assistant).

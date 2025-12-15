@@ -19,7 +19,7 @@ AmbuIndia is a rapid ambulance booking and emergency response application design
 
 ## Setup
 
-http://localhost:5173
+http://localhost:3000/
 
 ## API Configuration
 

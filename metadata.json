@@ -1,0 +1,7 @@
+{
+  "name": "AmbuIndia",
+  "description": "Rapid ambulance booking and emergency response app tailored for India, featuring AI-powered triage assistance and real-time fleet tracking.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

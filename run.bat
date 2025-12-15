@@ -1,3 +1,2 @@
-@echo off
-cd /d "%~dp0"
+cd /d "C:\Users\Admin\Desktop\BAPESSS"
 npm run dev

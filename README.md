@@ -17,9 +17,8 @@ AmbuIndia is a rapid ambulance booking and emergency response application design
 - **Icons**: Lucide React
 - **Build/Runtime**: ES Modules via `esm.sh` (No bundler required for basic preview)
 ## Click on this to view the app
+https://bapesss-ambulance-booking-app.vercel.app/
 
- https://prarthanaj-codes.github.io/BAPESSS-Ambulance-booking-app-/
- 
 ## API Configuration
 
 The application requires a valid Google Gemini API Key to function fully (specifically the Chat Assistant).

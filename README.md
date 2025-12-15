@@ -19,14 +19,7 @@ AmbuIndia is a rapid ambulance booking and emergency response application design
 
 ## Setup
 
-This project uses ES Modules directly in the browser.
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/prarthanaj-codes/BAPESSS-Ambulance-booking-app-.git
-   ```
-
-2. Open `index.html` in a modern browser using a local server (e.g., Live Server in VS Code).
+http://localhost:5173
 
 ## API Configuration
 

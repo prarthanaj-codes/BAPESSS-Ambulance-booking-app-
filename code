@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define WORD_LEN 5
+#define MAX_TRIES 6
+
+#define GREEN  "\033[42m"
+#define YELLOW "\033[43m"
+#define GRAY   "\033[100m"
+#define RESET  "\033[0m"
+
+int main()
+{
+    char words[][6] = {"APPLE", "MANGO", "GRAPE", "PEACH", "BERRY"};
+    int totalWords = 5;
+
+    srand(time(NULL));
+    char WORD[6];
+    strcpy(WORD, words[rand() % totalWords]);
+
+    char guess[WORD_LEN + 1];
+    int attempt = 0;
+    int score = 100;
+
+    printf("===== WORD GUESS GAME =====\n");
+    printf("Guess the 5-letter word\n");
+    printf("Max Attempts: %d\n", MAX_TRIES);
+    printf("HINT: It is a FRUIT \n\n");
+
+    while (attempt < MAX_TRIES)
+    {
+        int found = 0;
+        int used[WORD_LEN] = {0};
+
+        printf("Attempt %d: ", attempt + 1);
+        scanf("%s", guess);
+
+        for (int i = 0; i < WORD_LEN; i++)
+            guess[i] = toupper(guess[i]);
+
+        if (strcmp(guess, WORD) == 0)
+        {
+            printf(GREEN "\nYOU WON!\n" RESET);
+            printf("SCORE: %d\n", score);
+            return 0;
+        }
+
+        // GREEN pass
+        for (int i = 0; i < WORD_LEN; i++)
+        {
+            if (guess[i] == WORD[i])
+            {
+                printf(GREEN " %c " RESET, guess[i]);
+                used[i] = 1;
+            }
+            else
+                printf(" _ ");
+        }
+        printf("\n");
+
+        // YELLOW / GRAY pass
+        for (int i = 0; i < WORD_LEN; i++)
+        {
+            if (guess[i] == WORD[i])
+                continue;
+
+            found = 0;
+            for (int j = 0; j < WORD_LEN; j++)
+            {
+                if (!used[j] && guess[i] == WORD[j])
+                {
+                    found = 1;
+                    used[j] = 1;
+                    break;
+                }
+            }
+
+            if (found)
+                printf(YELLOW " %c " RESET, guess[i]);
+            else
+                printf(GRAY " %c " RESET, guess[i]);
+        }
+        printf("\n\n");
+
+        score -= 10;
+        attempt++;
+    }
+
+    printf("XXX GAME OVER XXX\n");
+    printf("Correct Word: %s\n", WORD);
+    printf("FINAL SCORE: %d\n", score);
+
+    return 0;
+}
